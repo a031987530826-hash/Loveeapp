@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100b13">
+<title>LoveeApp ❤️</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #100b13;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+.logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #25101d;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  font-size: 65px;
+}
+h1 { color: #ff438d; font-size: 36px; }
+.subtitle { color: #c5b6c3; line-height: 1.6; }
+.card {
+  background: #211a25;
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+input {
+  width: 100%;
+  padding: 16px;
+  margin: 12px 0;
+  border: 1px solid #554052;
+  border-radius: 12px;
+  background: #130f17;
+  color: white;
+  font-size: 16px;
+}
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 30px;
+  background: #f52d82;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.note {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<main class="container">
+  <div class="logo">❤️</div>
+  <h1>LoveeApp</h1>
+  <p class="subtitle">
+    Conecte-se. Compartilhe. Viva!<br>
+    Uma comunidade exclusiva para adultos.
+  </p>
+
+  <section class="card">
+    <h2>Bem-vindo(a)!</h2>
+    <p>Entre na nossa comunidade exclusiva.</p>
+    <input id="invite" type="text"
+      placeholder="Digite seu código de convite">
+    <button onclick="entrar()">
+      CONTINUAR ❤️
+    </button>
+    <p id="message"></p>
+  </section>
+
+  <p class="note">
+    Acesso destinado exclusivamente a maiores de 18 anos.
+    O cadastro e a validação dos convites serão ativados
+    após a integração com o servidor.
+  </p>
+</main>
+<script>
+function entrar() {
+  const code = document.getElementById("invite").value.trim();
+  const message = document.getElementById("message");
+
+  message.style.color = "#ff79ad";
+
+  if (!code) {
+    message.textContent = "Digite seu código de convite.";
+    return;
+  }
+
+  message.textContent =
+    "A validação dos convites será ativada na próxima etapa.";
+}
+</script>
+</body>
+</html>
